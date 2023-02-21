@@ -1,22 +1,38 @@
 # Дан список чисел. Определите,
 # сколько в нем встречается различных чисел.
 
-list_nums = [1, 2, 3, 1, 1, 5, 10, 20, 20, 30]
+# list_nums = [1, 2, 3, 1, 1, 5, 10, 20, 20, 30]
 
-print(len(set(list_nums)))
+# print(len(set(list_nums)))
 
 # Дана последовательность из N целых чисел и число K.
 # Необходимо сдвинуть всю последовательность
 # (сдвиг - циклический) на K элементов вправо,
 # K – положительное число.
 
-list_nums = [1, 2, 3, 4, 5]
-k = 7
-print(list_nums)
-result = list_nums[(k % len(list_nums)):] + list_nums[:(k % len(list_nums))]
-print(result)
+# Решение Дениса
 
-# 2 Вариант
+# lst = [1, 2, 3, 4, 5]
+# k = 2
+# # k = int(input())
+# # k %= len(lst) или k = k % len(lst) - деление на длину чтобы защититься от больших чисел
+
+# for i in range(k): 
+# # i = 0 и 1 тк k = 2
+#     lst.insert(0, lst.pop(-1)) # 2 вариант - lst.insert(0, lst.pop(len(lst) -1))
+#     # insert добавляет элемент на 0 позицию, те на место 1 (единицы) в списке [1, 2, 3, 4, 5]
+#     # ф-ия pop возвращает значение данного элемента на позиции -1 в списке [1, 2, 3, 4, 5], те 5 на место 1 (единицы)
+    
+# print(lst)
+
+# 1 вариант Марии
+# list_nums = [1, 2, 3, 4, 5]
+# k = 7
+# print(list_nums)
+# result = list_nums[(k % len(list_nums)):] + list_nums[:(k % len(list_nums))]
+# print(result)
+
+# 2 Вариант Марии
 # list_nums = [1, 2, 3, 4, 5]
 # k = 7
 
@@ -30,21 +46,32 @@ print(result)
 
 # 3 задача
 
-list_dict = [{"V": "S001"}, {"V": "S002"},
-             {"VI": "S001"}, {"VI": "S005"},
-             {"VII": " S005 "}, {"V": " S009 "},
-             {"VIII": " S007 "}]
+# list_dict = [{"V": "S001"}, {"V": "S002"},
+#              {"VI": "S001"}, {"VI": "S005"},
+#              {"VII": " S005 "}, {"V": " S009 "},
+#              {"VIII": " S007 "}]
 
 
 
-print(set(list(i.values())[0].strip() for i in list_dict))
+# print(set(list(i.values())[0].strip() for i in list_dict))
 
 # Дан массив, состоящий из целых чисел.
 # Напишите программу, которая подсчитает
 # количество элементов массива, больших
 # предыдущего (элемента с предыдущим номером)
 
+# Решение Дениса
 
-list_nums = [0, -1, 5, 2, 3]
+# n = [0, -1, 5, 2, 3]
+# cnt = 0
+# for i in range(len(n) - 1):
+#     if n[i] < n[i + 1]:
+#     # если следующий элемент больше текущего, то count = count + 1
+#     # НО len(n) - 1 чтобы мы не вышли за границы множества
+#         cnt += 1
+# print(cnt)
 
-print(sum([1 for i in range(1, len(list_nums)) if list_nums[i] > list_nums[i - 1]]))
+# Решение Марии
+# list_nums = [0, -1, 5, 2, 3]
+
+# print(sum([1 for i in range(1, len(list_nums)) if list_nums[i] > list_nums[i - 1]]))

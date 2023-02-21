@@ -29,6 +29,14 @@ string = "She sells sea shells on the sea shore The shells that she sells are se
 string = set(string.lower().split())
 print(len(string))
 
+# Вариант Дениса
+
+print(len(set(input().lower().split())))
+
+# set убирает повторы слов, len(set) считает число неповторяющихся слов,
+# lower убирает значение регистра, split слова в строке 
+# преобразует в элементы массива
+
 
 # Ваня и Петя поспорили, кто быстрее решит
 # следующую задачу: “Задана последовательность
